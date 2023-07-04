@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="container">
+        <h2>Hello this is a Index page of Project</h2>
+        <form action="insert" method="post">
+        <div class="row">
+            <div class="col-md-8">
+                <form action="insert" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                <div class="mb-3">
+                    <label for="bname" class="form-label">Book name:</label>
+                    <input type="text" class="form-control" id="bname" name="bname">
+                </div>
+                <div class="mb-3">
+                    <label for="bauth" class="form-label">Book author:</label>
+                    <input type="text" class="form-control" id="bauth" name="bauth">
+                </div>
+                <div class="mb-3">
+                    <label for="bcover" class="form-label">Upload book cover:</label>
+                    <input type="file" class="form-control" id="bcover" name="bcover">
+                </div>
+                <div class="mb-3">
+                    <label for="bcover" class="form-label">Book price:</label>
+                    <input type="text" class="form-control" id="bprice" name="bprice">
+                </div>
+                <div class="mb-3">
+                    <label for="bpdf" class="form-label">Upload Book PDF:</label>
+                    <input type="file" class="form-control" id="bpdf" name="bpdf">
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-outline-success">Add Book</button>
+                </div>
+                </form>
+            </div>
+        </form>    
+        </div>
+    </div>
+{% endblock %}    

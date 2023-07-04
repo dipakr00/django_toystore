@@ -1,0 +1,21 @@
+{% extends 'Base.html' %}
+{% load static %}
+
+{% block content%}
+
+    <div class="container-fluid">
+
+        <h3> Login Here...!!!</h3>
+        <form action="ulogin" method="POST">
+            
+            {% csrf_token %}
+            
+            <label for="username">User Name:</label>
+            <input type="text" name="uname"><br><br>
+            <label for="password">Password:</label>
+            <input type="text" name="passwd"><br><br>
+            <button style="background-color: green;border-redius: 5%;color: antiquewhitw;">Log In</button>   
+        </form>
+    </div>
+
+{% endblock %}  

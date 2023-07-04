@@ -1,0 +1,109 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block content%}
+
+    <div class="container-fluid">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="{% static 'image/toy10.jpg' %}" class="d-block w-100" alt="slid1">
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'image/toy9.jpg' %}" class="d-block w-100" alt="slid2">
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'image/toy8.jpg' %}" class="d-block w-100" alt="slid3">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <h1>School Essentials</h1> 
+        <p><i>Get Unique and Quirky School Essentials at Toy's Store</i></p>
+        <hr>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="{% static 'image/toy13.jpg'%}" class="card-img-top" alt="card1">
+                <div class="card-body">
+                  <h5 class="card-title">wolpin 1 Pc Lunch Box for Kids Leak Proof Tiffin Box for Boys, Girls, School & Office, Lunch Box for Kids Microwave Safe, Cartoon 800 ML Blue (Food Grade PP Plastic)</h5>
+                  <p class="card-text">-60% ₹399<br>
+                    M.R.P.: ₹999<br>
+                    Inclusive of all taxes</p>
+                  <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col"><div class="card" style="width: 18rem;">
+              <img src="{% static 'image/toy12.jpg' %}" class="card-img-top" alt="card2">
+              <div class="card-body">
+                <h5 class="card-title">Frantic Cartoon Plush School Backpack Bag for 2 to 5 Years Baby/Boys/Girls Preschool, Picnic, Nursery</h5>
+                <p class="card-text">-56% ₹329<br> M.R.P.: ₹749<br>
+                  Inclusive of all taxes</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+            <div class="col"><div class="card" style="width: 18rem;">
+              <img src="{% static 'image/toy14.jpg' %}" class="card-img-top" alt="card3">
+              <div class="card-body">
+                <h5 class="card-title">FunBlast Water Bottle  Kids Cartoon School Water Bottle, 450 ML BPA Free Water Bottle, Cute Animal Design Water Bottle with Straw, Side Handle (Beige, Polycarbonate, Pack of 1)</h5>
+                <p class="card-text">-54% ₹460<br>
+                  M.R.P.: ₹999<br>
+                  Inclusive of all taxes</p>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          </div>
+          </div> 
+          <div class="d-flex gap-2 d-md-block">
+            <a href="{% url 'school' %}" class="btn btn-primary">NEXT></a>
+          </div> 
+          <hr>
+          <h1>Shop by Age</h1> 
+        <p><i>Choose Products according to Age of Kid</i></p>
+        <hr>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="{% static 'image/0-1year.jpg'%}" class="card-img-top" alt="card1">
+                <div class="card-body">
+                  <a href="{% url '0-1year' %}" class="btn btn-primary">Toy for 0-1 Years Kids</a>
+                </div>
+              </div>
+            </div>
+            <div class="col"><div class="card" style="width: 18rem;">
+              <img src="{% static 'image/1-2year.jpg' %}" class="card-img-top" alt="card2">
+              <div class="card-body">
+                <a href="{% url '1-3year' %}" class="btn btn-primary">Toy for 1-3 Year Kids</a>
+              </div>
+            </div>
+          </div>
+            <div class="col"><div class="card" style="width: 18rem;">
+              <img src="{% static 'image/3+year.jpg' %}" class="card-img-top" alt="card3">
+              <div class="card-body">
+                <a href="{% url '3+year' %}" class="btn btn-primary">Toy for 3+ year Kids</a>
+              </div>
+            </div>
+          </div>
+          </div>
+          </div> 
+          <hr>
+    </div>
+
+
+{% endblock %}  

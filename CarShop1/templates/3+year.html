@@ -1,0 +1,42 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block content%}
+
+    <div class="container-fluid">
+      <h1>Toy for 3+ Years Kids</h1> 
+      <p><i>Choose any Product for the 3+ year Kids</i></p>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <img src="{% static 'image/0-1year.jpg'%}" class="card-img-top" alt="card1">
+              <div class="card-body">
+                <h5 class="card-title">Toy for 0-1 Years Kids</h5>
+                <a href="#" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col"><div class="card" style="width: 18rem;">
+            <img src="{% static 'image/1-2year.jpg' %}" class="card-img-top" alt="card2">
+            <div class="card-body">
+              <h5 class="card-title">Toy for 1-3 Year Kids </h5>
+              <a href="#" class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+        </div>
+          <div class="col"><div class="card" style="width: 18rem;">
+            <img src="{% static 'image/3+year.jpg' %}" class="card-img-top" alt="card3">
+            <div class="card-body">
+              <h5 class="card-title">Toy for 3+ year Kids<h5>
+              <a href="#" class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div> 
+        <div class="d-flex gap-2 d-md-block">
+          <a href="#" class="btn btn-primary">NEXT></a>
+        </div>
+    </div>
+
+{% endblock %}  
