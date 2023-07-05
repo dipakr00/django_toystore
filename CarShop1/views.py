@@ -69,7 +69,13 @@ def Userlogin(request):
         else:
             return redirect('/home')
         
-def LogOut(request):
+'''def LogOut(request):
     auth.logout(request)
     messages.success(request,"Successfully logged Out!!!")
-    return redirect('/login')         
+    return redirect('/login')      '''
+
+def LogOut(request):
+    if request.user.is_authenticated:
+        auth.logout(request)
+        messages.success(request,"Logged out Successfully")
+    return redirect("/home")   
